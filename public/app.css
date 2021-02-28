@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-family: Montserrat, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #f64f59,
+    #c471ed,
+    #12c2e9
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  width: 100vw;
+  color: #1e212d;
+}
+
+.container {
+  background-color: #fdfdfd;
+  width: 60%;
+  max-width: 600px;
+  min-height: 600px;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 100px;
+}
+hr {
+  border: none;
+  border-bottom: 0.1rem solid #c9c1c1;
+
+  /* margin-bottom: 20px; */
+}
+
+header {
+  background-color: rgb(243, 234, 234);
+  width: 100%;
+}
+
+.header-content {
+  padding: 20px;
+  line-height: 1.9;
+}
+
+h1 {
+  color: #f64f59;
+  font-weight: 900;
+}
+
+h1 > span {
+  font-weight: 400;
+}
+h2 {
+  color: #c9c1c1;
+  font-weight: 400;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-top: 20px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 20px;
+  line-height: 70px;
+  box-sizing: border-box;
+  transition: border-left 0.3s;
+  align-items: center;
+}
+
+.list-item:hover {
+  border-left: 7px solid #12c2e9;
+}
+
+.list-item-label {
+  padding-left: 10px;
+}
+
+.time {
+  margin-left: auto;
+}
+.delete {
+  margin-left: 40px;
+  visibility: hidden;
+  font-size: 1.2rem;
+}
+.delete:hover {
+  color: #f64f59;
+  font-weight: 900;
+}
+
+.list-item:hover .delete {
+  visibility: visible;
+}
+.form {
+  margin: auto;
+  width: 90%;
+}
+
+.form input {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid #c9c1c1;
+  line-height: 60px;
+  padding: 0 20px;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  outline: none;
+  color: #999393;
+}
+.form input::placeholder {
+  opacity: 0.7;
+  font-size: 1rem;
+}
+
+.todoName {
+  appearance: none;
+  background-color: #fafafa;
+  border: 1px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+
+.todoName:active {
+  background-color: #12c2e9;
+}
+.todoName:checked {
+  background-color: #12c2e9;
+  border-color: transparent;
+  padding: 2px 4px;
+}
+.todoName:checked::after {
+  content: "\2714";
+  color: #fafafa;
+}
+
+/* .todoName:checked + label {
+  text-decoration: line-through #8f8989;
+  opacity: 0.7;
+} */
+
+.done {
+  text-decoration: line-through #8f8989;
+  opacity: 0.7;
+}
